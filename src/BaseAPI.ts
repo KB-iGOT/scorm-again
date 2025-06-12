@@ -812,7 +812,7 @@ export default abstract class BaseAPI implements IBaseAPI {
 
       const functionName = listenerSplit[0];
 
-      let CMIElement = null;
+      let CMIElement : any = null;
       if (listenerSplit.length > 1) {
         CMIElement = listenerFunctions[i]?.replace(functionName + ".", "");
       }
@@ -848,7 +848,7 @@ export default abstract class BaseAPI implements IBaseAPI {
 
       const functionName = listenerSplit[0];
 
-      let CMIElement = null;
+      let CMIElement : any = null;
       if (listenerSplit.length > 1) {
         CMIElement = listenerFunctions[i]?.replace(functionName + ".", "");
       }
@@ -884,7 +884,7 @@ export default abstract class BaseAPI implements IBaseAPI {
 
       const functionName = listenerSplit[0];
 
-      let CMIElement = null;
+      let CMIElement: any = null;
       if (listenerSplit.length > 1) {
         CMIElement = listenerFunctions[i]?.replace(functionName + ".", "");
       }
@@ -1115,7 +1115,7 @@ export default abstract class BaseAPI implements IBaseAPI {
     if (this.settings.sendFullCommit) {
       return JSON.stringify({ cmi });
     }
-    return JSON.stringify({ cmi }, (k, v) => (v === undefined ? null : v), 2);
+    return JSON.stringify({ cmi }, (_k:any, v:any) => (v === undefined ? null : v), 2);
   }
 
   /**

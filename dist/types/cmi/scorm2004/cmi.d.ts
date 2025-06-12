@@ -36,7 +36,7 @@ export declare class CMI extends BaseRootCMI {
     reset(): void;
     get _version(): string;
     set _version(_version: string);
-    get _children(): string;
+    get _children(): any;
     set _children(_children: number);
     get completion_status(): string;
     set completion_status(completion_status: string);
