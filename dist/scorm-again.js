@@ -1768,7 +1768,7 @@ var BaseAPI = (function () {
         if (this.settings.sendFullCommit) {
             return JSON.stringify({ cmi: cmi });
         }
-        return JSON.stringify({ cmi: cmi }, function (k, v) { return (v === undefined ? null : v); }, 2);
+        return JSON.stringify({ cmi: cmi }, function (_k, v) { return (v === undefined ? null : v); }, 2);
     };
     BaseAPI.prototype.renderCMIToJSONObject = function () {
         return JSON.parse(this.renderCMIToJSONString());

@@ -1,5 +1,5 @@
 {
-  "name": "scorm-again",
+  "name": "kb-scorm-again",
   "version": "2.6.4",
   "description": "A modern SCORM JavaScript run-time library for AICC, SCORM 1.2, and SCORM 2004",
   "main": "dist/scorm-again.js",
@@ -66,10 +66,11 @@
     "webpack-cli": "^5.1.4"
   },
   "sideEffects": false,
-  "scripts": {
+  "scripts":{
     "test": "./node_modules/.bin/mocha --import=tsx --bdd --recursive --reporter list",
     "test:coverage": "./node_modules/.bin/c8 ./node_modules/.bin/mocha --import=tsx --recursive --timeout=10000 --exit --reporter json --reporter-option output=test-results.json",
     "compile": "./node_modules/.bin/webpack --bail --config webpack.config.js --mode production && tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "compile:watch": "./node_modules/.bin/webpack --config webpack.config.js --mode development --watch & tsc --emitDeclarationOnly --declaration --outDir dist/types --watch",
     "fix": "./node_modules/.bin/eslint ./src --fix",
     "prettier": "./node_modules/.bin/prettier --write src/**/*.ts test/**/*.ts src/*.ts test/*.ts"
   },

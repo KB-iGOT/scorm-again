@@ -117,7 +117,7 @@ export class CMI extends BaseRootCMI {
    * @return {string}
    * @private
    */
-  get _children(): string {
+  get _children(): any {
     return this.__children;
   }
 

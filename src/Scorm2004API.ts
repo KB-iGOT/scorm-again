@@ -245,7 +245,7 @@ class Scorm2004Impl extends BaseAPI {
       const index = Number(parts[2]);
       const element_base = `cmi.objectives.${index}`;
 
-      let objective_id;
+      let objective_id: any;
       const setting_id = stringMatches(
         CMIElement,
         "cmi\\.objectives\\.\\d+\\.id",
